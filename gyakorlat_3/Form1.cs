@@ -13,7 +13,7 @@ namespace gyakorlat_3
             {
                 for (int j = 1; j < 11; j++)
                 {
-                    VillogoGomb uj = new VillogoGomb();
+                    SzinezodoGomb uj = new SzinezodoGomb();
                     uj.Width = 100;
                     uj.Height = 50;
 

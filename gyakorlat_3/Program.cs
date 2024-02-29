@@ -32,4 +32,19 @@ namespace gyakorlat_3
             BackColor = Color.Yellow;
         }
     }
+
+    public class SzinezodoGomb : Button
+    {
+        public SzinezodoGomb()
+        {
+            Width = 20;
+            Height = 20;
+            MouseClick += SzinezodoGomb_MouseClick;
+        }
+
+        private void SzinezodoGomb_MouseClick(object? sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.Fuchsia;
+        }
+    }
 }

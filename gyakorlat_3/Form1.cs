@@ -28,6 +28,7 @@ namespace gyakorlat_3
                 }
             }
             */
+            /*
             //HARMADIK FELADATHOZ KELL(számolók gobokként)
             for (int i = 0; i < 10; i++)
             {
@@ -39,6 +40,12 @@ namespace gyakorlat_3
 
                     Controls.Add(uj);
                 }
+            }
+            */
+            //Random gombok kirakása az ablakra: Véletlengomb osztály 'Program.cs'-ben
+            for(int i = 0; i < 100; i++) { 
+                VeletlenGomb uj = new VeletlenGomb();
+                Controls.Add(uj);
             }
         }
     }

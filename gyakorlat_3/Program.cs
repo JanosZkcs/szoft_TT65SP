@@ -74,4 +74,19 @@ namespace gyakorlat_3
             Text = szam.ToString();
         }
     }
+    public class VeletlenGomb : Button
+    {
+        Random random = new Random();
+        public VeletlenGomb()
+        {
+            Width = random.Next(50 , 500); //Random látható értékeket adtam
+            Height = random.Next(50, 500);
+            this.BackColor = Color.FromArgb(RGBKod(), RGBKod(), RGBKod());
+        }
+        private int RGBKod()
+        {
+            int szam = random.Next(0, 256);
+            return szam;
+        }
+    }
 }

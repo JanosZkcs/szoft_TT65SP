@@ -1,3 +1,5 @@
+using Microsoft.Win32.SafeHandles;
+
 namespace gyakorlat_3
 {
     internal static class Program
@@ -45,6 +47,31 @@ namespace gyakorlat_3
         private void SzinezodoGomb_MouseClick(object? sender, MouseEventArgs e)
         {
             this.BackColor = Color.Fuchsia;
+        }
+    }
+
+    public class SzamoloGomb : Button
+    {
+        int szam = 1;
+        public SzamoloGomb()
+        {
+            Width = 20;
+            Height = 20;
+            Text = szam.ToString();
+            MouseClick += SzamoloGomb_MouseClick;
+        }
+
+        private void SzamoloGomb_MouseClick(object? sender, MouseEventArgs e)
+        {
+            if (szam < 5)
+            {
+                szam++;
+            }
+            else
+            {
+                szam = 1;
+            }
+            Text = szam.ToString();
         }
     }
 }

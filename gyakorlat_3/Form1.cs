@@ -13,7 +13,7 @@ namespace gyakorlat_3
             {
                 for (int j = 1; j < 11; j++)
                 {
-                    Button uj = new Button();
+                    VillogoGomb uj = new VillogoGomb();
                     uj.Width = 100;
                     uj.Height = 50;
 

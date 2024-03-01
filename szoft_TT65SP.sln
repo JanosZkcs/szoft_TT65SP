@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "szoft_TT65SP", "szoft_TT65S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{481E7FAF-DF43-48B0-B755-45056A0D8762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pascal Haromszog", "Pascal Haromszog\Pascal Haromszog.csproj", "{63414372-38B3-4675-8870-56316962F787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pascal Haromszog", "Pascal Haromszog\Pascal Haromszog.csproj", "{63414372-38B3-4675-8870-56316962F787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SakkTábla", "SakkTábla\SakkTábla.csproj", "{5D892334-1290-45B6-A088-160A5050238E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakkTábla", "SakkTábla\SakkTábla.csproj", "{5D892334-1290-45B6-A088-160A5050238E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakorlas_zh", "gyakorlas_zh\gyakorlas_zh.csproj", "{5B5E1A09-024B-4E71-A774-070D00FBD3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5D892334-1290-45B6-A088-160A5050238E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D892334-1290-45B6-A088-160A5050238E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D892334-1290-45B6-A088-160A5050238E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5E1A09-024B-4E71-A774-070D00FBD3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5E1A09-024B-4E71-A774-070D00FBD3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5E1A09-024B-4E71-A774-070D00FBD3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5E1A09-024B-4E71-A774-070D00FBD3FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

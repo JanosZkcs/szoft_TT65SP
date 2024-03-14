@@ -16,6 +16,9 @@ namespace Hajos_teszt
 
             MouseEnter += ValaszGomb_MouseEnter;
             MouseLeave += ValaszGomb_MouseLeave;
+
+            BorderStyle = BorderStyle.None;
+            Cursor = Cursors.Hand;
         }
 
         private void ValaszGomb_MouseLeave(object? sender, EventArgs e)

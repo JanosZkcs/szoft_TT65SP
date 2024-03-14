@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Hajos_teszt
 {
     public partial class Form1 : Form
@@ -14,11 +16,17 @@ namespace Hajos_teszt
         {
             AktivKerdesek = new List<Kerdes>();
             OsszesKerdes = KerdesBeolvasas();
+            for (int i = 0; i < 7; i++)
+            {
+                AktivKerdesek.Add(OsszesKerdes[0]);
+                OsszesKerdes.RemoveAt(0);
+            }
+            dataGridView1.DataSource = AktivKerdesek;
         }
         List<Kerdes> KerdesBeolvasas()
         {
             List<Kerdes> lista = new List<Kerdes>();
-            StreamReader sr = new StreamReader("text.txt",true);
+            StreamReader sr = new StreamReader("C:\\Users\\jzako\\source\\repos\\szoft_TT65SP\\Hajos teszt\\text.txt", true);//Local
             while(!sr.EndOfStream) { 
                 string sor = sr.ReadLine() ?? string.Empty;
                 string[] tomb = sor.Split('\t');

@@ -55,5 +55,21 @@ namespace Hajos_teszt
                 return null;
             }
     }
+        void KerdesMegjelenites(Kerdes kerdes)
+        {
+            label1.Text = kerdes.KerdesSzoveg;
+            Elso.Text = kerdes.Valasz1;
+            Masodik.Text = kerdes.Valasz2;
+            Harmadik.Text = kerdes.Valasz3;
+            if (!string.IsNullOrEmpty(kerdes.URL))
+            {
+                pictureBox1.Load("https://storage.altinum.hu/hajo/" + kerdes.URL);
+                pictureBox1.Visible = true;
+            }
+            else
+            {
+                pictureBox1.Visible=false;
+            }
+        }
     }
 }

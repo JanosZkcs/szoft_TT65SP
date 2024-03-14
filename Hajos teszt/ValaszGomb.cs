@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hajos_teszt
 {
-    internal class ValaszGomb : TextBox
+    public class ValaszGomb : TextBox
     {
         public ValaszGomb()
         {

@@ -7,6 +7,7 @@ namespace Hajos_teszt
         List<Kerdes> OsszesKerdes;
         List<Kerdes> AktivKerdesek;
         int AktivKerdes = 5;
+        int szamlalo = 0;
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace Hajos_teszt
             for (int i = 0; i < 7; i++)
             {
                 AktivKerdesek.Add(OsszesKerdes[0]);
+                KerdesMegjelenites(OsszesKerdes[0]);
                 OsszesKerdes.RemoveAt(0);
             }
         }

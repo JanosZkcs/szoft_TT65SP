@@ -23,6 +23,7 @@ namespace Hajos_teszt
                 KerdesMegjelenites(OsszesKerdes[0]);
                 OsszesKerdes.RemoveAt(0);
             }
+            dataGridView1.DataSource = AktivKerdesek;
         }
         List<Kerdes> KerdesBeolvasas()
         {

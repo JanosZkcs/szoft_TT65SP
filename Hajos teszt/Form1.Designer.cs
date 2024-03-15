@@ -34,14 +34,16 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             KovetkezoB = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // Elso
             // 
             Elso.BackColor = Color.LightGray;
             Elso.BorderStyle = BorderStyle.None;
-            Elso.Location = new Point(34, 125);
+            Elso.Location = new Point(34, 77);
             Elso.Multiline = true;
             Elso.Name = "Elso";
             Elso.ReadOnly = true;
@@ -52,7 +54,7 @@
             // 
             Harmadik.BackColor = Color.LightGray;
             Harmadik.BorderStyle = BorderStyle.None;
-            Harmadik.Location = new Point(34, 291);
+            Harmadik.Location = new Point(34, 243);
             Harmadik.Multiline = true;
             Harmadik.Name = "Harmadik";
             Harmadik.ReadOnly = true;
@@ -63,7 +65,7 @@
             // 
             Masodik.BackColor = Color.LightGray;
             Masodik.BorderStyle = BorderStyle.None;
-            Masodik.Location = new Point(34, 204);
+            Masodik.Location = new Point(34, 156);
             Masodik.Multiline = true;
             Masodik.Name = "Masodik";
             Masodik.ReadOnly = true;
@@ -73,7 +75,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(34, 77);
+            label1.Location = new Point(34, 27);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 4;
@@ -81,7 +83,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(411, 125);
+            pictureBox1.Location = new Point(411, 77);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(377, 245);
             pictureBox1.TabIndex = 5;
@@ -90,18 +92,28 @@
             // KovetkezoB
             // 
             KovetkezoB.BackColor = SystemColors.ControlLight;
-            KovetkezoB.Location = new Point(302, 425);
+            KovetkezoB.Location = new Point(687, 17);
             KovetkezoB.Name = "KovetkezoB";
-            KovetkezoB.Size = new Size(200, 72);
+            KovetkezoB.Size = new Size(101, 41);
             KovetkezoB.TabIndex = 6;
             KovetkezoB.Text = "Következő";
             KovetkezoB.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(34, 346);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(754, 188);
+            dataGridView1.TabIndex = 7;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 537);
+            Controls.Add(dataGridView1);
             Controls.Add(KovetkezoB);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
@@ -112,6 +124,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,5 +137,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button KovetkezoB;
+        private DataGridView dataGridView1;
     }
 }

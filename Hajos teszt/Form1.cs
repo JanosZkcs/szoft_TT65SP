@@ -139,6 +139,13 @@ namespace Hajos_teszt
         {
             if(valasz == kerdes.HelyesValasz)
             {
+                kerdes.HelyesValaszokSzama++;
+                if (kerdes.HelyesValaszokSzama == 3)
+                {
+                    AktivKerdesek.RemoveAt(AktivKerdes);
+                    AktivKerdesek.Add(OsszesKerdes[0]);
+                    OsszesKerdes.RemoveAt(0);
+                }
                 return true;
             }
             else

@@ -7,6 +7,7 @@ namespace Hajos_teszt
         List<Kerdes> OsszesKerdes;
         List<Kerdes> AktivKerdesek;
         int AktivKerdes = 0;
+        int Valasz;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +23,49 @@ namespace Hajos_teszt
                 OsszesKerdes.RemoveAt(0);
             }
             KerdesMegjelenites(AktivKerdesek[0]);
+            Elso.MouseClick += Elso_MouseClick1;
+            Masodik.MouseClick += Masodik_MouseClick;
+            Harmadik.MouseClick += Harmadik_MouseClick;
             dataGridView1.DataSource = AktivKerdesek;
+        }
+
+        private void Harmadik_MouseClick(object? sender, MouseEventArgs e)
+        {
+            Valasz = 3;
+            if(joE(Valasz, AktivKerdesek[AktivKerdes]))
+            {
+                Harmadik.BackColor = Color.Green;
+            }
+            else
+            {
+                Harmadik.BackColor = Color.Red;
+            }
+        }
+
+        private void Masodik_MouseClick(object? sender, MouseEventArgs e)
+        {
+            Valasz = 2;
+            if (joE(Valasz, AktivKerdesek[AktivKerdes]))
+            {
+                Masodik.BackColor = Color.Green;
+            }
+            else
+            {
+                Masodik.BackColor = Color.Red;
+            }
+        }
+
+        private void Elso_MouseClick1(object? sender, MouseEventArgs e)
+        {
+            Valasz = 1;
+            if (joE(Valasz, AktivKerdesek[AktivKerdes]))
+            {
+                Elso.BackColor = Color.Green;
+            }
+            else
+            {
+                Elso.BackColor = Color.Red;
+            }
         }
         List<Kerdes> KerdesBeolvasas()
         {
@@ -77,6 +120,10 @@ namespace Hajos_teszt
 
         private void KovetkezoB_Click(object sender, EventArgs e)
         {
+            Valasz = 0;
+            Elso.BackColor = Color.LightGray;
+            Masodik.BackColor = Color.LightGray;
+            Harmadik.BackColor = Color.LightGray;
             AktivKerdes++;
             if (AktivKerdes < 7)
             {
@@ -86,6 +133,17 @@ namespace Hajos_teszt
             {
                 AktivKerdes = 0;
                 KerdesMegjelenites(AktivKerdesek[0]);
+            }
+        }
+        private bool joE(int valasz,Kerdes kerdes)
+        {
+            if(valasz == kerdes.HelyesValasz)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

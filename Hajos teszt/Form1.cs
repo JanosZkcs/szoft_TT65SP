@@ -6,8 +6,7 @@ namespace Hajos_teszt
     {
         List<Kerdes> OsszesKerdes;
         List<Kerdes> AktivKerdesek;
-        int AktivKerdes = 5;
-        int szamlalo = 0;
+        int AktivKerdes = 0;
         public Form1()
         {
             InitializeComponent();
@@ -20,9 +19,9 @@ namespace Hajos_teszt
             for (int i = 0; i < 7; i++)
             {
                 AktivKerdesek.Add(OsszesKerdes[0]);
-                KerdesMegjelenites(OsszesKerdes[0]);
                 OsszesKerdes.RemoveAt(0);
             }
+            KerdesMegjelenites(AktivKerdesek[0]);
             dataGridView1.DataSource = AktivKerdesek;
         }
         List<Kerdes> KerdesBeolvasas()
@@ -53,11 +52,12 @@ namespace Hajos_teszt
                 sr.Close();
                 return lista;
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("Hiba történt a beolvasás során");
                 return null;
             }
-    }
+        }
         void KerdesMegjelenites(Kerdes kerdes)
         {
             label1.Text = kerdes.KerdesSzoveg;
@@ -71,7 +71,21 @@ namespace Hajos_teszt
             }
             else
             {
-                pictureBox1.Visible=false;
+                pictureBox1.Visible = false;
+            }
+        }
+
+        private void KovetkezoB_Click(object sender, EventArgs e)
+        {
+            AktivKerdes++;
+            if (AktivKerdes < 7)
+            {
+                KerdesMegjelenites(AktivKerdesek[AktivKerdes]);
+            }
+            else
+            {
+                AktivKerdes = 0;
+                KerdesMegjelenites(AktivKerdesek[0]);
             }
         }
     }

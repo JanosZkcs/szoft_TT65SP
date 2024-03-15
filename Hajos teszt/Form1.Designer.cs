@@ -92,20 +92,21 @@
             // KovetkezoB
             // 
             KovetkezoB.BackColor = SystemColors.ControlLight;
-            KovetkezoB.Location = new Point(687, 17);
+            KovetkezoB.Location = new Point(687, 328);
             KovetkezoB.Name = "KovetkezoB";
             KovetkezoB.Size = new Size(101, 41);
             KovetkezoB.TabIndex = 6;
             KovetkezoB.Text = "Következő";
             KovetkezoB.UseVisualStyleBackColor = false;
+            KovetkezoB.Click += KovetkezoB_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(34, 346);
+            dataGridView1.Location = new Point(34, 386);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(754, 188);
+            dataGridView1.Size = new Size(754, 148);
             dataGridView1.TabIndex = 7;
             // 
             // Form1

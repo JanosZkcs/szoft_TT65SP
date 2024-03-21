@@ -46,6 +46,14 @@ namespace Snake_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            /*Thread thread1 = new Thread(() => timer1_Tick());
+            Thread thread2 = new Thread(() => MeregTimer_Tick());
+            Thread thread3 = new Thread(() => EtelTimer_Tick());
+            thread1.Start();
+
+            thread1.Start();
+            thread2.Start();*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -90,18 +98,22 @@ namespace Snake_Game
 
         private void MeregTimer_Tick(object sender, EventArgs e)
         {
-            Random rnd = new(0);
-            Mereg mereg = new();
+            Random rnd = new Random();
+            Mereg mereg = new Mereg();
             mereg.Top = rnd.Next(0,ClientRectangle.Height);
             mereg.Left = rnd.Next(0, ClientRectangle.Width);
+            Controls.Add(mereg);
+            timer1.Start();
         }
 
         private void EtelTimer_Tick(object sender, EventArgs e)
         {
-            Random rnd = new(0);
-            Etel etel = new();
+            Random rnd = new Random();
+            Etel etel = new Etel();
             etel.Top = rnd.Next(0, ClientRectangle.Height);
             etel.Left = rnd.Next(0, ClientRectangle.Width);
+            Controls.Add(etel);
+            timer1.Start();
         }
     }
 }

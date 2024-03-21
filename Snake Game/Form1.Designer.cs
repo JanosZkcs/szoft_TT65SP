@@ -42,12 +42,11 @@
             // 
             // MeregTimer
             // 
+            MeregTimer.Enabled = true;
             MeregTimer.Interval = 5000;
-            MeregTimer.Tick += MeregTimer_Tick;
             // 
             // EtelTimer
             // 
-            EtelTimer.Tick += EtelTimer_Tick;
             // 
             // Form1
             // 

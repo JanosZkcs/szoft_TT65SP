@@ -7,26 +7,24 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Snake_Game
 {
-    internal class Mereg : Button
+    internal class Mereg : UserControl
     {
         public static int Meret = 20;
         public Mereg()
         {
             Width = Mereg.Meret;
             Height = Mereg.Meret;
-            Text = "\U0001F571";
-            this.Enabled = false;
+            BackColor = Color.Red;
         }
     }
-    internal class Etel : Button
+    internal class Etel : UserControl
     {
         public static int Meret = 20;
         public Etel()
         {
             Width = Mereg.Meret;
             Height = Mereg.Meret;
-            Text = "\U0001F34E";
-            this.Enabled = false;
+            BackColor= Color.Red;
         }
     }
 }

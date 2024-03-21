@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakkTábla", "SakkTábla\Sa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gyakorlat_3", "gyakorlat_3\gyakorlat_3.csproj", "{215AC665-D98B-4D18-B9AF-F2DD4D9743D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hajos teszt", "Hajos teszt\Hajos teszt.csproj", "{DF29F768-4B2C-4F37-9924-4411DA4F2FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hajos teszt", "Hajos teszt\Hajos teszt.csproj", "{DF29F768-4B2C-4F37-9924-4411DA4F2FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game", "Snake Game\Snake Game.csproj", "{B011EC9C-49AF-49D2-BEFF-47BE06EBE4D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DF29F768-4B2C-4F37-9924-4411DA4F2FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF29F768-4B2C-4F37-9924-4411DA4F2FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF29F768-4B2C-4F37-9924-4411DA4F2FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B011EC9C-49AF-49D2-BEFF-47BE06EBE4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B011EC9C-49AF-49D2-BEFF-47BE06EBE4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B011EC9C-49AF-49D2-BEFF-47BE06EBE4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B011EC9C-49AF-49D2-BEFF-47BE06EBE4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,5 @@
+using System.Diagnostics.Metrics;
+
 namespace Snake_Game
 {
     public partial class Form1 : Form
@@ -8,6 +10,7 @@ namespace Snake_Game
         int irány_y = 0;
         int lepesszam;
         int hossz = 1;
+        List<KigyoElem> kigyo = new List<KigyoElem>();
         public Form1()
         {
             InitializeComponent();
@@ -53,28 +56,52 @@ namespace Snake_Game
             fej_y += irány_y * KigyoElem.Meret;
 
 
-            foreach (KigyoElem item in Controls)
+            foreach (object item in Controls)
             {
-                if (item.Top == fej_y && item.Left == fej_x)
+                if (item is KigyoElem)
                 {
-                    timer1.Enabled = false;
-                    return;
+                    KigyoElem ke = (KigyoElem)item;
+
+                    if (ke.Top == fej_y && ke.Left == fej_x)
+                    {
+                        timer1.Enabled = false;
+                        return;
+                    }
                 }
             }
 
             KigyoElem k = new();
             k.Top = fej_y;
             k.Left = fej_x;
+            kigyo.Add(k);
             Controls.Add(k);
-            if (lepesszam % 2 == 0) 
-            { 
-                k.BackColor = Color.Yellow; 
+            if (lepesszam % 2 == 0)
+            {
+                k.BackColor = Color.Yellow;
             }
 
-            if (Controls.Count > hossz)
+            if (kigyo.Count > hossz)
             {
-                Controls.RemoveAt(0);
+                KigyoElem levagando = kigyo[0];
+                kigyo.RemoveAt(0);
+                Controls.Remove(levagando);
             }
+        }
+
+        private void MeregTimer_Tick(object sender, EventArgs e)
+        {
+            Random rnd = new(0);
+            Mereg mereg = new();
+            mereg.Top = rnd.Next(0,ClientRectangle.Height);
+            mereg.Left = rnd.Next(0, ClientRectangle.Width);
+        }
+
+        private void EtelTimer_Tick(object sender, EventArgs e)
+        {
+            Random rnd = new(0);
+            Etel etel = new();
+            etel.Top = rnd.Next(0, ClientRectangle.Height);
+            etel.Left = rnd.Next(0, ClientRectangle.Width);
         }
     }
 }

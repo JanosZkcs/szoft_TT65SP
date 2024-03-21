@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             timer1 = new System.Windows.Forms.Timer(components);
+            MeregTimer = new System.Windows.Forms.Timer(components);
+            EtelTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // timer1
@@ -37,6 +39,15 @@
             timer1.Enabled = true;
             timer1.Interval = 500;
             timer1.Tick += timer1_Tick;
+            // 
+            // MeregTimer
+            // 
+            MeregTimer.Interval = 5000;
+            MeregTimer.Tick += MeregTimer_Tick;
+            // 
+            // EtelTimer
+            // 
+            EtelTimer.Tick += EtelTimer_Tick;
             // 
             // Form1
             // 
@@ -52,5 +63,7 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer MeregTimer;
+        private System.Windows.Forms.Timer EtelTimer;
     }
 }

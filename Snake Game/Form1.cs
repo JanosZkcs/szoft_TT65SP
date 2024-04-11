@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
 
 namespace Snake_Game
@@ -9,8 +10,10 @@ namespace Snake_Game
         int irány_x = 1;
         int irány_y = 0;
         int lepesszam;
+        int eltelt;
         int hossz = 1;
         List<KigyoElem> kigyo = new List<KigyoElem>();
+            Random rnd = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -46,19 +49,12 @@ namespace Snake_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            /*Thread thread1 = new Thread(() => timer1_Tick());
-            Thread thread2 = new Thread(() => MeregTimer_Tick());
-            Thread thread3 = new Thread(() => EtelTimer_Tick());
-            thread1.Start();
-
-            thread1.Start();
-            thread2.Start();*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lepesszam++;
+            eltelt += 500;
 
             fej_x += irány_x * KigyoElem.Meret;
             fej_y += irány_y * KigyoElem.Meret;
@@ -94,26 +90,19 @@ namespace Snake_Game
                 kigyo.RemoveAt(0);
                 Controls.Remove(levagando);
             }
+
+            if (eltelt % 5000 == 0)
+            {
+                KajaSpawn();
+            }
         }
 
-        private void MeregTimer_Tick(object sender, EventArgs e)
+        private void KajaSpawn()
         {
-            Random rnd = new Random();
-            Mereg mereg = new Mereg();
-            mereg.Top = rnd.Next(0,ClientRectangle.Height);
-            mereg.Left = rnd.Next(0, ClientRectangle.Width);
-            Controls.Add(mereg);
-            timer1.Start();
-        }
-
-        private void EtelTimer_Tick(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-            Etel etel = new Etel();
-            etel.Top = rnd.Next(0, ClientRectangle.Height);
-            etel.Left = rnd.Next(0, ClientRectangle.Width);
+            Etel etel = new();
+            etel.Top = rnd.Next(0,ClientRectangle.Height);
+            etel.Left = rnd.Next(0,ClientRectangle.Width);
             Controls.Add(etel);
-            timer1.Start();
         }
     }
 }

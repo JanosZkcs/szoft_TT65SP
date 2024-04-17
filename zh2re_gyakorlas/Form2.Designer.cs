@@ -47,6 +47,7 @@
             // 
             // buttonMegse
             // 
+            buttonMegse.DialogResult = DialogResult.Cancel;
             buttonMegse.Location = new Point(156, 410);
             buttonMegse.Name = "buttonMegse";
             buttonMegse.Size = new Size(94, 29);
@@ -56,6 +57,7 @@
             // 
             // buttonOkF2
             // 
+            buttonOkF2.DialogResult = DialogResult.OK;
             buttonOkF2.Location = new Point(256, 410);
             buttonOkF2.Name = "buttonOkF2";
             buttonOkF2.Size = new Size(94, 29);

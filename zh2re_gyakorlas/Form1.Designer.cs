@@ -125,7 +125,7 @@
             // textBox1
             // 
             textBox1.DataBindings.Add(new Binding("Text", futokBindingSource, "Nev", true));
-            textBox1.Location = new Point(12, 46);
+            textBox1.Location = new Point(194, 34);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(380, 27);
             textBox1.TabIndex = 3;
@@ -152,11 +152,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(493, 34);
+            button1.Location = new Point(12, 33);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(176, 29);
             button1.TabIndex = 6;
-            button1.Text = "Átlag";
+            button1.Text = "Érdekességek";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

@@ -81,20 +81,23 @@ namespace zh2re_gyakorlas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double osszeg = 0;
+            string leggyorsabb = "";
+            double futottIdo = double.PositiveInfinity;
             int db = 0;
-            
+
             foreach (var item in futok)
             {
                 if (item.Nemzetiseg == "USA")
                 {
-                    osszeg += item.EredmenyPerc;
                     db++;
                 }
+                if (item.EredmenyPerc <= futottIdo)
+                {
+                    futottIdo = item.EredmenyPerc;
+                    leggyorsabb = item.Nev; //több m.o. esetén egyet ad vissza csak.
+                }
             }
-
-            double avg = osszeg / db;
-            MessageBox.Show($"Az USA átlaga időben(p):{avg}");
+            MessageBox.Show($"Az USA-ból {db} versenyző érkezett, és a legjobb időt {leggyorsabb} futotta.");
         }
     }
 }

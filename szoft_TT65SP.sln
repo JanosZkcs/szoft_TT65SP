@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake Game", "Snake Game\Sn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adatkotes", "Adatkotes\Adatkotes.csproj", "{D81C0267-B803-4663-9574-97138315BB4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zh2re_gyakorlas", "zh2re_gyakorlas\zh2re_gyakorlas.csproj", "{FA589D7E-2544-4FCC-A34E-1B9DE6009E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zh2re_gyakorlas", "zh2re_gyakorlas\zh2re_gyakorlas.csproj", "{FA589D7E-2544-4FCC-A34E-1B9DE6009E0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kvíz játék", "kvíz játék\kvíz játék.csproj", "{D1B5846D-F5E1-4C4C-9A43-DA40B8194910}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{FA589D7E-2544-4FCC-A34E-1B9DE6009E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA589D7E-2544-4FCC-A34E-1B9DE6009E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA589D7E-2544-4FCC-A34E-1B9DE6009E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B5846D-F5E1-4C4C-9A43-DA40B8194910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B5846D-F5E1-4C4C-9A43-DA40B8194910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B5846D-F5E1-4C4C-9A43-DA40B8194910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B5846D-F5E1-4C4C-9A43-DA40B8194910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

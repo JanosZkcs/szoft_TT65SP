@@ -1,4 +1,4 @@
-using CsvHelper;
+ï»¿using CsvHelper;
 using System.ComponentModel;
 using System.Globalization;
 
@@ -63,7 +63,7 @@ namespace zh2re_gyakorlas
         {
             if (futokBindingSource.Current == null) return;
 
-            if (MessageBox.Show("Törlöd?", "Elem törlése", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("TÃ¶rlÃ¶d?", "Elem tÃ¶rlÃ©se", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 futokBindingSource.RemoveCurrent();
             }
@@ -93,7 +93,8 @@ namespace zh2re_gyakorlas
                 }
             }
 
-            double Avg = osszeg / db;
+            double avg = osszeg / db;
+            MessageBox.Show($"Az USA Ã¡tlaga idÅ‘ben(p):{avg}");
         }
     }
 }

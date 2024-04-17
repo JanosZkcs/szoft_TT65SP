@@ -127,7 +127,7 @@
             textBox1.DataBindings.Add(new Binding("Text", futokBindingSource, "Nev", true));
             textBox1.Location = new Point(12, 46);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(503, 27);
+            textBox1.Size = new Size(380, 27);
             textBox1.TabIndex = 3;
             // 
             // buttonDel
@@ -152,7 +152,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(492, 11);
+            button1.Location = new Point(493, 34);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 6;
